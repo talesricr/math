@@ -1,6 +1,3 @@
-/*
-    xnum 
-*/
 function bhaskara(a:number, b:number, c:number, xnum:number=3) {
     const delta:number = Math.pow(b, 2) - 4 * a * c
     if (delta < 0){
