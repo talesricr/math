@@ -1,4 +1,4 @@
-function bhaskara(a:number, b:number, c:number, result:number=0) {
+function bhaskara(a:number, b:number, c:number, result:number=0): number | number[] {
     const delta:number = Math.pow(b, 2) - 4 * a * c
     if (delta < 0){
         return 0
@@ -23,4 +23,11 @@ function bhaskara(a:number, b:number, c:number, result:number=0) {
     const x3:number[] | null = [];
     x3.push(x1, x2);
     return x3
+}
+
+function factorial(num:number): number {
+    if (num < 0)  throw new Error("Negative numbers are not allowed for calculating Factorial");
+    if (num === 0) return 1;
+    var fact:number = num * factorial(num - 1)
+    return fact;
 }
